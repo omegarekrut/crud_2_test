@@ -6,11 +6,6 @@ import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import axios from "axios";
-
-axios.defaults.baseURL = "http://localhost:8000/api";
-axios.defaults.headers.common["Authorization"] =
-    "Bearer " + localStorage.getItem("access_token");
-
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
 createInertiaApp({
